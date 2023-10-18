@@ -1,13 +1,9 @@
-import java.util.Scanner
-
 fun main() {
-    val sc = Scanner(System.`in`)
-    var total = sc.nextInt()
-    val count = sc.nextInt()
+    var total = readln().toInt()
+    val count = readln().toInt()
 
     repeat(count) {
-        val price = sc.nextInt()
-        val num = sc.nextInt()
+        val (price, num) = readln().split(" ").map { it.toInt() }
         total -= price * num
     }
 
