@@ -1,3 +1,5 @@
+package FirstWeek
+
 fun main() {
     val (N, m, M, T, R) = readln().split(" ").map { it.toInt() }
     
@@ -26,6 +28,5 @@ fun main() {
             return
         }
     }
-
     println(time)
 }
