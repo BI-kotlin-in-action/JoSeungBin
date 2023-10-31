@@ -9,9 +9,9 @@ fun combination(n: Int, r: Int): Long {
 }
 
 fun main() {
-    val casesize = readln().toInt()
+    val caseSize = readln().toInt()
 
-    for (i in 0..casesize - 1) {
+    for (i in 0 until caseSize) {
         val (N, M) = readln().split(" ").map { it.toInt() }
         val result = combination(M, N)
         println(result)
