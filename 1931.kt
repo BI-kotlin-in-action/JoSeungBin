@@ -9,11 +9,11 @@ fun main() {
     val sortedMeetings = meetings.sortedWith(compareBy({ it.second }, { it.first }))
 
     var count = 1
-    var temp = sortedMeetings[0].second
+    var endTime = sortedMeetings[0].second
 
     for (i in 1 until input) {
-        if (sortedMeetings[i].first >= temp) {
-            temp = sortedMeetings[i].second
+        if (sortedMeetings[i].first >= endTime) {
+            endTime = sortedMeetings[i].second
             count += 1
         }
     }

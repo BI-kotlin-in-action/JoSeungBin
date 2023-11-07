@@ -7,8 +7,8 @@ fun main() {
 
     val input = readln().toInt()
     val inputList: List<Int> = readln().split(" ").map { it.toInt() }
-    
-    for (i in 0 until input) firstLine.add(inputList[i])
+
+    firstLine.addAll(inputList)
     
     var n = 1
     while (firstLine.isNotEmpty()) {
