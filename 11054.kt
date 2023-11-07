@@ -2,8 +2,8 @@ fun main() {
     val input = readln().toInt()
     val inputList: List<Int> = readln().split(" ").map { it.toInt() }
     
-    val maxArr = Array(input) { 1 }
-    val minArr = Array(input) { 1 }
+    val maxArr = IntArray(input) { 1 }
+    val minArr = IntArray(input) { 1 }
     for (i in 0 until input) {
         for (j in 0..i) {
             // 증가하는 바이토닉 수열

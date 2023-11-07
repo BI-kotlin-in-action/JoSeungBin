@@ -1,9 +1,9 @@
 fun main() {
-    val array = IntArray(26) { 0 } 
+    val array = IntArray(26)
 
     val size = readln().toInt()
 
-    for (i in 0..size - 1) {
+    for (i in 0 until size) {
         val input = readln()
         array[input[0].toInt() - 97]++ 
 
@@ -14,7 +14,7 @@ fun main() {
     if (max < 5) {
         println("PREDAJA")
     } else {
-        for (i in 0..array.size - 1) {
+        for (i in 0 until array.size) {
             if (array[i] >= 5) {
                 print((i + 97).toChar()) 
             }

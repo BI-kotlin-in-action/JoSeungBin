@@ -1,4 +1,4 @@
-import java.util.*
+import java.util.Stack
 import kotlin.collections.ArrayDeque
 
 fun main() {
@@ -10,33 +10,33 @@ fun main() {
     
     for (i in 0 until input) firstLine.add(inputList[i])
     
-    var N = 1
-    while (!firstLine.isEmpty()) {
+    var n = 1
+    while (firstLine.isNotEmpty()) {
         when {
-            firstLine.first() == N -> {
+            firstLine.first() == n -> {
                 firstLine.removeFirst()
-                N += 1
+                n += 1
             }
-            !secondLine.empty() && secondLine.last() == N -> {
+            !secondLine.empty() && secondLine.last() == n -> {
                 secondLine.pop()
-                N += 1
+                n += 1
             }
             else -> secondLine.push(firstLine.removeFirst())
         }
     }
         
-    while (!secondLine.empty()) {
+    while (secondLine.isNotEmpty()) {
         when {
-            secondLine.last() == N -> {
+            secondLine.last() == n -> {
                 secondLine.pop()
-                N += 1
+                n += 1
             }
             else -> break
         }
     }
     
     when {
-        firstLine.isEmpty() && secondLine.empty() -> print("Nice")
+        firstLine.isEmpty() && secondLine.isEmpty() -> print("Nice")
         else -> print("Sad")
     } 
 }
