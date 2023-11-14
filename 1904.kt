@@ -8,5 +8,5 @@ fun main() {
     for (i in 3..n) {
         dp[i] = (dp[i - 2] + dp[i - 1]) % 15746
     }
-    print(dp[n] % 15746)
+    print(dp[n])
 }

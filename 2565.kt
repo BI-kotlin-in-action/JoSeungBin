@@ -34,7 +34,7 @@ fun main() {
         }
     }
 
-    val Bmax = Array(100) { 1 }
+    val Bmax = IntArray(100) { 1 }
     for (i in 100 - input until 100) {
         for (j in 100 - input..i) {
             // 증가하는 바이토닉 수열
